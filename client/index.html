@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>url image abstraction layer </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin-left: 5%;
+      font-family: Arial;
+    }
+    
+    .object {
+      color: red;
+    }
+    
+    .vertical-line {
+      border-left: thick solid #9FB58C;
+    }
+  </style>
+</head>
+
+<body>
+  <h1> Basejump: URL Shortener Microservice</h1>
+  <div class="vertical-line">
+    <ul>
+      <li>Given a url that follows the http://www.example.com format, this microservice returns a JSON object that includes a shortened url. Visiting the shortened version redirects the user to the original url. </li>
+
+      <li>Given an invalid url, the microservice returns a JSON object with an error message. </li>
+    </ul>
+  </div>
+  <h2>Example Creation Usage</h2>
+
+  <p class='object'>https://url-shortener-2.herokuapp.com/new/https://www.google.com
+    <br> https://url-shortener-2.herokuapp.com/new/http://www.cnn.com
+  </p>
+
+  <h2> Example Output </h2>
+  <p class='object'>{"original_url":"https://www.google.com","short_url":"https://url-shortener-2.herokuapp.com/41Dr_leOl"}
+    <br> {"original_url":"http://www.cnn.com","short_url":"https://url-shortener-2.herokuapp.com/E1ohkl-_x"}
+  </p>
+
+  <h2> Example Usage</h2>
+  <p>The shortened url <a href="https://url-shortener-2.herokuapp.com/E1ohkl-_x">https://url-shortener-2.herokuapp.com/E1ohkl-_x</a>, for example, redirects to http://www.cnn.com. </p>
+
+</body>
+
+</html>
