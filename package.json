@@ -8,6 +8,6 @@
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
-    "request": "^2.67.0",
+    "request": "^2.67.0"
   }
 }
