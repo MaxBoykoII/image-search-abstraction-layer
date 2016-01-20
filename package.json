@@ -1,13 +1,14 @@
 {
-  "name": "image search abstraction layer",
+  "name": "image-search",
   "version": "0.0.0",
   "description": "An api for image searching built on google custom serach and express",
   "main": "server.js",
-  "repository": "https://github.com/MaxBoykoII/image-search-abstraction-layer",
+  "repository": "",
   "author": "Max Boyko <maxboykomax@gmail.com>",
   "dependencies": {
-    "async": "~0.2.8",
     "express": "~3.2.4",
-    "request": "^2.67.0"
-  }
+    "request": "^2.67.0",
+    "cors": "2.7.1"
+  },
+  "private": true
 }
