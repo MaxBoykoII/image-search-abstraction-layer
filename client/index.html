@@ -2,47 +2,45 @@
 <html>
 
 <head>
-  <title>url image abstraction layer </title>
+  <title>url image search api </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin-left: 5%;
-      font-family: Arial;
-    }
+     body {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-family: Arial;
+      }
+      
+      .object {
+        color: red;
+      }
+      
+      .vertical-line {
+        border-left: thick solid #9FB58C;
+      }
     
-    .object {
-      color: red;
-    }
-    
-    .vertical-line {
-      border-left: thick solid #9FB58C;
-    }
-  </style>
-</head>
+  </style> </head>
 
-<body>
-  <h1> Basejump: URL Shortener Microservice</h1>
-  <div class="vertical-line">
-    <ul>
-      <li>Given a url that follows the http://www.example.com format, this microservice returns a JSON object that includes a shortened url. Visiting the shortened version redirects the user to the original url. </li>
+  <body>
+    <h1> Basejump: Image Search Abstraction Layer</h1>
+    <div class="vertical-line">
+      <ul>
+        <li>Given a query string, this api searches the web for relevant images and responds with an array of objects. Each object contains the url of an image, a snippet about the image, its context, and a thumbnail version.
+        </li>
 
-      <li>Given an invalid url, the microservice returns a JSON object with an error message. </li>
-    </ul>
-  </div>
-  <h2>Example Creation Usage</h2>
+        <li>By appending ?offset=num to to an api call, where num is a positive number, you can paginate through the responses.
+        </li>
+        <li>
+          Visit <a href='https://img-search-abstraction-layer.herokuapp.com/api/latest/imagesearch'>here</a> for a list of the latest search strings.
 
-  <p class='object'>https://url-shortener-2.herokuapp.com/new/https://www.google.com
-    <br> https://url-shortener-2.herokuapp.com/new/http://www.cnn.com
-  </p>
+        </li>
+      </ul>
+    </div>
+    <h2>Example Searches</h2>
 
-  <h2> Example Output </h2>
-  <p class='object'>{"original_url":"https://www.google.com","short_url":"https://url-shortener-2.herokuapp.com/41Dr_leOl"}
-    <br> {"original_url":"http://www.cnn.com","short_url":"https://url-shortener-2.herokuapp.com/E1ohkl-_x"}
-  </p>
-
-  <h2> Example Usage</h2>
-  <p>The shortened url <a href="https://url-shortener-2.herokuapp.com/E1ohkl-_x">https://url-shortener-2.herokuapp.com/E1ohkl-_x</a>, for example, redirects to http://www.cnn.com. </p>
-
-</body>
+    <p class='object'>https://img-search-abstraction-layer.herokuapp.com/api/imagesearch/lion
+      <br> https://img-search-abstraction-layer.herokuapp.com/api/imagesearch/lion?offset=2
+    </p>
+  </body>
 
 </html>
